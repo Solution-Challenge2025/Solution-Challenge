@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff9800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .member {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.4s, background 0.4s;
+            box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .member::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 70%);
+            transition: transform 0.5s;
+        }
+        .member:hover::before {
+            transform: translate(50%, 50%);
+        }
+        .member:hover {
+            transform: scale(1.1);
+            background: #ff9800;
+            color: white;
+        }
+        .member h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .member p {
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+            .member {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>We are a passionate team participating in the Google Hackathon Solution Challenge. Our goal is to create innovative solutions that make an impact.</p>
+        <div class="team">
+            <div class="member">
+                <h2>Bogavalli Ganesh</h2>
+                <p>Innovator & Developer</p>
+            </div>
+            <div class="member">
+                <h2>Chillapalli Harish</h2>
+                <p>Creative Thinker & Designer</p>
+            </div>
+            <div class="member">
+                <h2>Doma Akash Vardan</h2>
+                <p>Problem Solver & Coder</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
